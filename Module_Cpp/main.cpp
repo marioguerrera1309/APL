@@ -7,7 +7,12 @@
 #define SERVER_IP   "127.0.0.1"
 #define PORT        50000
 #define BUFFER_SIZE 1024
-int main() {
+extern "C" {
+    void hello() {
+        std::cout << "Hello from C++ module!" << std::endl;
+    }
+}
+/*int main() {
     int sock = 0;
     struct sockaddr_in serv_addr;
     const char *message = "Pingcpp";
@@ -51,3 +56,4 @@ int main() {
     close(sock);
     return 0;
 }
+*/
